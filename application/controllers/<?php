@@ -1,0 +1,8 @@
+<?php
+class Testmodel extends CI_Model{
+	public function gettest()
+	{
+	echo "hello world";
+	}
+}
+?>
