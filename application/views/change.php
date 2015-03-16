@@ -12,7 +12,9 @@
            echo form_open('text/alter/'.$id);
            echo form_input('due_date',$due_date);
            echo '<br>';
-	       echo form_textarea('todo_text',$todo_text);
+           $text = str_replace("%20"," ",$todo_text);
+           $text = str_replace("%3Cbr%3E","\n",$text);
+	       echo form_textarea('todo_text',$text);
 	       echo '<br>';
 	       echo form_submit('submit', '修改');
 

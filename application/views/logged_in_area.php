@@ -15,17 +15,18 @@
 			
 			echo $row->due_date;
 			$data=$row->todo_id;
+			$todo_text =str_replace("\n","<br>",$row->todo_text);
 			$segments = array(
 				'text',
 				'change',
 				'due_date' => $row->due_date,
-				'todo_text'=> $row->todo_text,
+				'todo_text'=> $todo_text,
 				'id' => $row->todo_id
 				);
 			//echo anchor('text/change/'.$data,'修改');
             echo anchor(site_url($segments),'编辑');
 			echo anchor('text/remove/'.$data,'删除').'<br>';
-			echo $row->todo_text.'<br>';
+			echo $todo_text.'<br>';
 			
 		}
 		echo $pagination;
