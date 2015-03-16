@@ -12,7 +12,7 @@
          
          foreach($query->result() as $row)
 		{
-			$page = $query->num_rows();
+			
 			echo $row->due_date;
 			$data=$row->todo_id;
 			$segments = array(
