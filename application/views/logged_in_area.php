@@ -12,7 +12,7 @@
          
          foreach($query->result() as $row)
 		{
-			
+			$this->load->helper('url');
 			echo $row->due_date;
 			$data=$row->todo_id;
 			$todo_text =str_replace("\n","<br>",$row->todo_text);
